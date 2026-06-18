@@ -1681,3 +1681,244 @@ ul {
     text-align: center;
   }
 }
+
+/* ═══════════════════════════════════════════════
+   EXPERT TEAM GRID
+   ═══════════════════════════════════════════════ */
+
+.experts-section {
+  padding: var(--section-padding);
+  background: var(--bg-primary);
+}
+
+.experts-main-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.experts-advisors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.expert-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 2rem;
+  text-align: center;
+  transition: box-shadow 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+}
+
+.expert-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.expert-card-main {
+  padding: 2.5rem;
+  border-top: 3px solid var(--brand-teal);
+}
+
+.expert-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border: 3px solid var(--brand-mint-light);
+  display: block;
+}
+
+.expert-avatar-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--gradient-brand);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.expert-card-main .expert-avatar-placeholder {
+  width: 120px;
+  height: 120px;
+  font-size: 2rem;
+}
+
+.expert-name {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.expert-title {
+  font-size: 0.85rem;
+  color: var(--brand-teal);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.expert-role-detail {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.experts-advisors-label {
+  text-align: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-tertiary);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════
+   HOOKS / PREMIUM PERKS SECTION
+   ═══════════════════════════════════════════════ */
+
+.hooks-section {
+  padding: var(--section-padding);
+  background: var(--bg-secondary);
+}
+
+.hooks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.hook-card {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  border-left: 4px solid var(--brand-teal);
+  transition: all 0.3s var(--ease-out);
+}
+
+.hook-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.hook-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hook-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.hook-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.hook-value {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, rgba(0, 151, 167, 0.1), rgba(77, 208, 165, 0.1));
+  color: var(--brand-teal);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.hooks-badge {
+  display: inline-flex;
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius-full);
+  background: var(--gradient-brand);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+/* ═══════════════════════════════════════════════
+   PRICING UPDATES
+   ═══════════════════════════════════════════════ */
+
+.pricing-original-price {
+  font-size: 1rem;
+  color: var(--text-tertiary);
+  text-decoration: line-through;
+  margin-bottom: 0.25rem;
+}
+
+.pricing-discount-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: 0.5rem;
+}
+
+.pricing-certification {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-accent);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.pricing-certification .cert-icon {
+  font-size: 1.5rem;
+}
+
+.pricing-certification strong {
+  color: var(--brand-teal);
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — EXPERT TEAM, HOOKS, PRICING
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .experts-main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experts-advisors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hooks-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .experts-advisors-grid {
+    grid-template-columns: 1fr;
+  }
+}
