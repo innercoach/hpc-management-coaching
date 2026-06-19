@@ -437,7 +437,7 @@ ul {
 
 .hero-differentiators li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.6rem;
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.85);
@@ -447,6 +447,7 @@ ul {
 .hero-differentiators li svg {
   flex-shrink: 0;
   color: var(--brand-mint);
+  margin-top: 3px;
 }
 
 .hero-differentiators li strong {
