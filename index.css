@@ -1918,21 +1918,15 @@ ul {
    ═══════════════════════════════════════════════ */
 
 .experts-advisors-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
   margin-top: 3rem;
 }
 
-.experts-advisors-grid .expert-card:last-child:nth-child(2n+1) {
-  grid-column: 1 / -1;
-  max-width: calc(50% - 0.75rem);
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-
 .expert-card {
+  flex: 0 1 calc((100% - 3rem) / 3); /* 3 per row; last row of 2 auto-centers */
   background: var(--bg-card);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
@@ -2088,8 +2082,8 @@ ul {
    ═══════════════════════════════════════════════ */
 
 @media (max-width: 900px) {
-  .experts-advisors-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .expert-card {
+    flex-basis: calc((100% - 1.5rem) / 2); /* 2 per row on tablet */
   }
 
   .hooks-grid {
@@ -2204,7 +2198,7 @@ ul {
 .visual-break-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1800&q=80');
+  background-image: url('images/stock-visualbreak.jpg');
   background-size: cover;
   background-position: center top;
   opacity: 0.14;
@@ -2301,7 +2295,7 @@ ul {
 }
 
 @media (max-width: 600px) {
-  .experts-advisors-grid {
-    grid-template-columns: 1fr;
+  .expert-card {
+    flex-basis: 100%; /* 1 per row on mobile */
   }
 }
