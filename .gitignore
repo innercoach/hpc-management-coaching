@@ -1,5 +1,19 @@
-.DS_Store
+# OS
+**/.DS_Store
+
+# Editor / Tool state
+.claude/
+.vscode/
+.idea/
+
+# Microsoft Office lock files
 ~$*
+
+# Reference documents (not part of the website)
 *.docx
 *.pdf
 *.md
+
+# Logs & caches
+*.log
+node_modules/
