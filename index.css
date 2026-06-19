@@ -3,7 +3,7 @@
    Light / Professional / Corporate / Bold
    ═══════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+/* Fonts loaded via <link> in index.html for faster, non-blocking delivery */
 
 /* ─── Design Tokens ─── */
 :root {
@@ -70,6 +70,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* offset for fixed navbar when jumping to anchors */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -881,20 +882,6 @@ ul {
   box-shadow: var(--shadow-card-hover);
 }
 
-.competency-number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  background: var(--gradient-brand);
-  color: #fff;
-  font-size: 0.85rem;
-  font-weight: 800;
-  border-radius: var(--radius-sm);
-  margin-bottom: 1rem;
-}
-
 .competency-card h3 {
   font-size: 1rem;
   font-weight: 700;
@@ -933,16 +920,6 @@ ul {
 .outcome-item:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-card-hover);
-}
-
-.outcome-number {
-  font-size: 1.8rem;
-  font-weight: 900;
-  background: var(--gradient-brand);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 0.75rem;
 }
 
 .outcome-item p {
@@ -1694,7 +1671,7 @@ ul {
 }
 
 .faq-item.active .faq-answer {
-  max-height: 300px;
+  max-height: 500px;
   padding-bottom: 1.25rem;
 }
 
@@ -1793,7 +1770,9 @@ ul {
     transition: none;
   }
 
-  .particle {
+  .hero-orb,
+  .highlight-card-inner,
+  .hero-badge .dot {
     animation: none;
   }
 }
@@ -1826,10 +1805,6 @@ ul {
   .mobile-toggle {
     display: block;
     z-index: 1001;
-  }
-
-  .hero-stats {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .problem-grid {
@@ -1901,11 +1876,6 @@ ul {
     font-size: 2rem;
   }
 
-  .hero-stats {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-  }
-
   .audience-grid {
     grid-template-columns: 1fr;
   }
@@ -1947,17 +1917,6 @@ ul {
    EXPERT TEAM GRID
    ═══════════════════════════════════════════════ */
 
-.experts-section {
-  padding: var(--section-padding);
-  background: var(--bg-primary);
-}
-
-.experts-main-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
 .experts-advisors-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1987,11 +1946,6 @@ ul {
   transform: translateY(-4px);
 }
 
-.expert-card-main {
-  padding: 2.5rem;
-  border-top: 3px solid var(--brand-teal);
-}
-
 .expert-avatar {
   width: 120px;
   height: 120px;
@@ -2001,26 +1955,6 @@ ul {
   margin: 0 auto 1rem;
   border: 3px solid var(--brand-mint-light);
   display: block;
-}
-
-.expert-avatar-placeholder {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: var(--gradient-brand);
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1rem;
-}
-
-.expert-card-main .expert-avatar-placeholder {
-  width: 120px;
-  height: 120px;
-  font-size: 2rem;
 }
 
 .expert-name {
@@ -2149,35 +2083,11 @@ ul {
   margin-left: 0.5rem;
 }
 
-.pricing-certification {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  border-radius: var(--radius-md);
-  background: var(--bg-accent);
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-}
-
-.pricing-certification .cert-icon {
-  font-size: 1.5rem;
-}
-
-.pricing-certification strong {
-  color: var(--brand-teal);
-}
-
 /* ═══════════════════════════════════════════════
    RESPONSIVE — EXPERT TEAM, HOOKS, PRICING
    ═══════════════════════════════════════════════ */
 
 @media (max-width: 900px) {
-  .experts-main-grid {
-    grid-template-columns: 1fr;
-  }
-
   .experts-advisors-grid {
     grid-template-columns: repeat(2, 1fr);
   }

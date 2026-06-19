@@ -7,6 +7,27 @@
   <title>PerformX — Khai Vấn Quản Trị Chuyên Nghiệp</title>
   <meta name="description"
     content="Chương trình đào tạo Khai Vấn Quản Trị Chuyên Nghiệp — Tư duy tư vấn quản trị, Chiều sâu khai vấn lãnh đạo, Thiết kế giải pháp. Dành cho Coach, HRD, Consultant và Lãnh đạo doanh nghiệp.">
+  <meta name="theme-color" content="#0a2540">
+  <link rel="canonical" href="https://mc.hipervn.com/">
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mc.hipervn.com/">
+  <meta property="og:title" content="PerformX — Khai Vấn Quản Trị Chuyên Nghiệp">
+  <meta property="og:description"
+    content="Chương trình đào tạo nghề Management Coaching bài bản đầu tiên tại Việt Nam — kết hợp tư duy tư vấn quản trị với chiều sâu khai vấn lãnh đạo.">
+  <meta property="og:image" content="https://mc.hipervn.com/assets/hyperX circle 2.png">
+  <meta property="og:locale" content="vi_VN">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="assets/hyperX circle 2.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+
   <link rel="stylesheet" href="index.css">
 </head>
 
@@ -1216,7 +1237,7 @@
             <li>Tài liệu & Template đầy đủ</li>
           </ul>
 
-          <a href="https://forms.gle/" class="pricing-btn">Đăng ký Khóa 01 →</a>
+          <a href="https://huytranvn.sg.larksuite.com/share/base/form/shrlglIk4aXFOViV25zxcHfhvse" target="_blank" rel="noopener" class="pricing-btn">Đăng ký Khóa 01 →</a>
         </div>
         <div class="pricing-card">
           <div class="pricing-type">Standard</div>
@@ -1231,7 +1252,7 @@
             <li>Tài liệu & Template đầy đủ</li>
           </ul>
 
-          <a href="https://forms.gle/" class="pricing-btn pricing-btn-outline">Đăng ký ngay →</a>
+          <a href="https://huytranvn.sg.larksuite.com/share/base/form/shrlglIk4aXFOViV25zxcHfhvse" target="_blank" rel="noopener" class="pricing-btn pricing-btn-outline">Đăng ký ngay →</a>
         </div>
       </div>
     </div>
@@ -1248,7 +1269,7 @@
       </div>
       <div class="faq-list reveal">
         <div class="faq-item">
-          <button class="faq-question" id="faq-1">
+          <button class="faq-question" id="faq-1" aria-expanded="false">
             Management Coaching khác gì Executive Coaching?
             <span class="faq-icon">+</span>
           </button>
@@ -1258,7 +1279,7 @@
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-question" id="faq-2">
+          <button class="faq-question" id="faq-2" aria-expanded="false">
             Tôi chưa có chứng chỉ coaching, có tham gia được không?
             <span class="faq-icon">+</span>
           </button>
@@ -1269,7 +1290,7 @@
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-question" id="faq-3">
+          <button class="faq-question" id="faq-3" aria-expanded="false">
             Dự án 90 ngày hoạt động như thế nào?
             <span class="faq-icon">+</span>
           </button>
@@ -1280,7 +1301,7 @@
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-question" id="faq-4">
+          <button class="faq-question" id="faq-4" aria-expanded="false">
             Chương trình có cấp chứng nhận không?
             <span class="faq-icon">+</span>
           </button>
@@ -1383,10 +1404,14 @@
         const item = btn.parentElement;
         const isOpen = item.classList.contains('active');
 
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('active');
+          i.querySelector('.faq-question')?.setAttribute('aria-expanded', 'false');
+        });
 
         if (!isOpen) {
           item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
         }
       });
     });
